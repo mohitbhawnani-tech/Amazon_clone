@@ -1,58 +1,75 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+<header>
+    <!-- AMAZON LOGO -->
+    <div class="logo">
+        <a href="{% url 'home' %}">
+            <img src="{% static 'images/amazon_logo.png' %}" alt="Amazon Logo">
+        </a>
+    </div>
 
-</head>
-<body>
-    <header>
-        <img src={% static "images/amazon_logo.png" %}>
-
-        <div class="box1">
-            <i class="fa-solid fa-location-dot" style="color: #FFFFFF;"></i>
-            <div class="box3">
-                <p class="box4">Delivering to Sonipat 131001</p>
-                <p class="box5">Update Location</p>
-            </div>
-        </div>
-
-        <div class="drop_down_box">
-            <select name="" id="">
-                <option value="">All</option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-            </select>
-            <input type="text" name="" placeholder=" Search amazon.in">
-            <div class="magnifying_box">
-                <i class="fa-solid fa-magnifying-glass" style="color: rgb(0, 0, 1);"></i>
-            </div>
-        </div>
-
-        <div class="language-box">
-            <p>🇮🇳 <span id="EN">EN</span></p>
-        </div>
-
-        <div class="Box-hello">
-            <p id="text1">Hello, sign in</p>
-            <p id="text2">Account &amp; Lists</p>
-        </div>
-
-        <div class="return-box">
-            <p id="text3">Return</p>
-            <p id="text4">&amp; Orders</p>
-        </div>
-
+    <!-- LOCATION -->
+    <div class="location_box">
+        <i class="fa-solid fa-location-dot"></i>
         <div>
-            <p>0</p>
-            <p>🛒 cart</p>
+            <div class="text_small">
+                Deliver to Mohit
+            </div>
+            <div class="text_update">
+                New Delhi 110032
+            </div>
         </div>
-    </header>
-</body>
-</html>
+    </div>
+
+    <!-- SEARCH BAR -->
+    <div class="search_box">
+        <select aria-label="Select Category">
+            <option>All</option>
+            <option>Electronics</option>
+            <option>Mobiles</option>
+            <option>Fashion</option>
+            <option>Home</option>
+            <option>Books</option>
+        </select>
+        <input type="text" placeholder="Search Amazon.in" aria-label="Search Amazon.in">
+        <button type="button" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+
+    <!-- LANGUAGE -->
+    <div class="language_box">
+        <span class="flag">🇮🇳</span>
+        <span>EN</span>
+        <i class="fa-solid fa-caret-down"></i>
+    </div>
+
+    <!-- ACCOUNT -->
+    <div class="account_box">
+        <div class="text_small">
+            Hello, sign in
+        </div>
+        <div class="account_text">
+            Account &amp; Lists
+            <i class="fa-solid fa-caret-down"></i>
+        </div>
+    </div>
+
+    <!-- RETURNS AND ORDERS -->
+    <div class="orders_box">
+        <div class="text_small">
+            Returns
+        </div>
+        <div class="orders_text">
+            &amp; Orders
+        </div>
+    </div>
+
+    <!-- CART -->
+    <div class="cart_box">
+        <div class="cart_icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart_number">0</span>
+        </div>
+        <span class="cart_text">Cart</span>
+    </div>
+</header>

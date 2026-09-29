@@ -4,10 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="{% static "css/navbar.css" %}">
+    <title>Amazon Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
 </head>
-<body>
+<body id="top">
+
+    <!-- Amazon Navbar Header -->
     {% include "navbar.html" %}
+
+    <!-- Page Content Container -->
+    <main class="main_content">
+        <div class="welcome_card">
+            <h1>Amazon Clone</h1>
+            <p>Header and Footer matching assignment specifications</p>
+        </div>
+    </main>
+
+    <!-- Amazon Footer -->
+    {% include "footer.html" %}
+
+    <script>
+        document.querySelector('.back_to_top')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>
